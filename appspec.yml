@@ -1,9 +1,13 @@
 version: 0.0
 os: linux
 files:
-    - source: /
-      destination: /app/nodeappexample
+    - source: /index.html
+      destination: /var/www/html/
 hooks:
+  Install:
+    - location: /scripts/install_application.sh
+      timeout: 180
+      runas: root
   ApplicationStop:
     - location: /scripts/stop_application.sh
       timeout: 180
