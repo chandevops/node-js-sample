@@ -5,11 +5,11 @@ files:
       destination: /app/nodeappexample
 hooks:
   ApplicationStop:
-    - location: /scripts/start_application.sh
+    - location: /scripts/stop_application.sh
       timeout: 180
       runas: root
   ApplicationStart:
-    - location: /scripts/stop_application.sh
+    - location: /scripts/start_application.sh
       timeout: 180
       runas: root
   
