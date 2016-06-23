@@ -8,4 +8,5 @@ var deployment = new SimpleDeployment({
     buildFolder: "build",
     staticFolder: "static"
 });
+
 deployment.run();
